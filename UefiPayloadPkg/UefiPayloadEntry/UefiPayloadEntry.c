@@ -84,7 +84,8 @@ MemInfoCallbackMmio (
              EFI_RESOURCE_ATTRIBUTE_UNCACHEABLE |
              EFI_RESOURCE_ATTRIBUTE_WRITE_COMBINEABLE |
              EFI_RESOURCE_ATTRIBUTE_WRITE_THROUGH_CACHEABLE |
-             EFI_RESOURCE_ATTRIBUTE_WRITE_BACK_CACHEABLE;
+             EFI_RESOURCE_ATTRIBUTE_WRITE_BACK_CACHEABLE |
+             EFI_RESOURCE_ATTRIBUTE_RUNTIME;
 
   BuildResourceDescriptorHob (Type, Attribue, (EFI_PHYSICAL_ADDRESS)Base, Size);
   DEBUG ((DEBUG_INFO, "buildhob: base = 0x%lx, size = 0x%lx, type = 0x%x\n", Base, Size, Type));
