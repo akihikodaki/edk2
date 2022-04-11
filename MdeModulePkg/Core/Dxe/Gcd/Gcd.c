@@ -2628,6 +2628,15 @@ CoreInitializeGcdServices (
                    ResourceHob->ResourceLength,
                    Capabilities
                    );
+
+        if (!EFI_ERROR (Status) &&
+            (ResourceHob->ResourceAttribute & EFI_RESOURCE_ATTRIBUTE_RUNTIME) == EFI_RESOURCE_ATTRIBUTE_RUNTIME) {
+          Status = CoreSetMemorySpaceAttributes(
+            ResourceHob->PhysicalStart,
+            ResourceHob->ResourceLength,
+            EFI_MEMORY_RUNTIME
+            );
+        }
       }
 
       if (GcdIoType != EfiGcdIoTypeNonExistent) {
