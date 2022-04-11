@@ -305,6 +305,8 @@ typedef UINT32 EFI_RESOURCE_ATTRIBUTE_TYPE;
 //
 #define EFI_RESOURCE_ATTRIBUTE_MORE_RELIABLE  0x02000000
 
+#define EFI_RESOURCE_ATTRIBUTE_RUNTIME 0x04000000
+
 ///
 /// Describes the resource properties of all fixed,
 /// nonrelocatable resource ranges found on the processor
